@@ -6,7 +6,7 @@ jdk: oraclejdk8
 email:
   - ben.alex@acegi.com.au
 install:
-  - mvn -B -Pdeploy -V -Dgpg.skip=true -DskipTests=true -Dmaven.javadoc.skip=true install
+  - mvn -B -Pdeploy -V dependency:go-offline
 script:
   - mvn -B -Pdeploy -Dgpg.skip=true verify
 after_success:
