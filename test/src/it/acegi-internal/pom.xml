@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>au.com.acegi</groupId>
+    <artifactId>acegi-standard-project</artifactId>
+    <version>@pom.version@</version>
+  </parent>
+  <groupId>corp.foo</groupId>
+  <artifactId>super-project</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Super Project</name>
+  <description>Another great project</description>
+  <url>https://foo.corp/super-project</url>
+  <inceptionYear>2009</inceptionYear>
+  <organization>
+    <name>Foo Corp</name>
+    <url>https://github.com/${github.org}</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>All Rights Reserved</name>
+      <url>https://en.wikipedia.org/wiki/All_rights_reserved</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Jane Bloggs</name>
+      <email>jane@foo.corp</email>
+      <organization>Foo Corp</organization>
+      <organizationUrl>https://foo.corp</organizationUrl>
+    </developer>
+  </developers>
+  <!-- inherit default scm, issueManagement and ciManagement -->
+  <properties>
+    <github.org>foo-corp</github.org>
+    <github.repo>super-project</github.repo>
+    <license.licenseName>internal</license.licenseName>
+    <license.projectName>Foo Corp(R) Super Project(TM)</license.projectName>
+    <maven.central.sync.skip>true</maven.central.sync.skip>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.enforcer.java>1.7</maven.enforcer.java>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-enforcer-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-pmd-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.basepom.maven</groupId>
+        <artifactId>duplicate-finder-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>**/HelpMojo*</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>au.com.acegi</groupId>
+        <artifactId>xml-format-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

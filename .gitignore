@@ -1,0 +1,5 @@
+target
+*~
+*.releaseBackup
+*.log
+release.properties
