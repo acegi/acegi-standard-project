@@ -231,17 +231,17 @@
               </goals>
               <configuration>
                 <rules>
-                  <banDistributionManagement />
-                  <dependencyConvergence />
+                  <banDistributionManagement/>
+                  <dependencyConvergence/>
                   <requireJavaVersion>
                     <version>[${maven.enforcer.java},)</version>
                   </requireJavaVersion>
-                  <requireNoRepositories />
-                  <requirePluginVersions />
+                  <requireNoRepositories/>
+                  <requirePluginVersions/>
                   <requireReleaseDeps>
                     <onlyWhenRelease>true</onlyWhenRelease>
                   </requireReleaseDeps>
-                  <requireUpperBoundDeps />
+                  <requireUpperBoundDeps/>
                 </rules>
               </configuration>
             </execution>
@@ -392,6 +392,9 @@
               <goals>
                 <goal>site</goal>
               </goals>
+              <configuration>
+                <message>Building site for ${project.version}</message>
+              </configuration>
             </execution>
           </executions>
         </plugin>
