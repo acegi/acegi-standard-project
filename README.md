@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/acegi/xml-format-maven-plugin.svg?branch=master)](https://travis-ci.org/acegi/acegi-standard-project)
+[![Dependency Status](https://www.versioneye.com/user/projects/579705114fe918004d2bf7d2/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/579705114fe918004d2bf7d2)
+[![Maven Central](https://img.shields.io/maven-central/v/au.com.acegi/acegi-standard-project.svg?maxAge=3600)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22au.com.acegi%22%20AND%20a%3A%22acegi-standard-project%22)
+[![License](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0.txt)
+
 # Acegi Standard Project
 
 Acegi Standard Project delivers conventions and configurations to simplify the
