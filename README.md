@@ -150,7 +150,8 @@ newly-revoked status via `gpg --send-keys KEY_ID`.
 ## Performing A Release
 
 If you used the default Travis CI configuration, a project maintainer can
-release by invoking `mvn -Pdeploy release:clean release:prepare`. This will
+release by invoking
+`mvn -Pdeploy -Dgpg.skip=true release:clean release:prepare`. This will
 update the POMs to a formal release version number, Git tag, and increment the
 version number for ongoing development. Travis will perform the actual release.
 
