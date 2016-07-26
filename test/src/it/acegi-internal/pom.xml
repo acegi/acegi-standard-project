@@ -32,7 +32,13 @@
       <organizationUrl>https://foo.corp</organizationUrl>
     </developer>
   </developers>
-  <!-- inherit default scm, issueManagement and ciManagement -->
+  <scm>
+    <connection>scm:git:git@github.com:${github.org}/${github.repo}.git</connection>
+    <developerConnection>scm:git:git@github.com:${github.org}/${github.repo}.git</developerConnection>
+    <url>git@github.com:${github.org}/${github.repo}.git</url>
+    <tag>HEAD</tag>
+  </scm>
+  <!-- inherit default issueManagement and ciManagement -->
   <properties>
     <github.org>foo-corp</github.org>
     <github.repo>super-project</github.repo>
