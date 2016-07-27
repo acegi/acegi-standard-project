@@ -4,7 +4,7 @@ cache:
 language: java
 jdk: oraclejdk8
 install:
-  - mvn -B -Pdeploy -V dependency:go-offline
+  - mvn -B -Pdeploy -DexcludeGroupIds=com.github.github -V dependency:go-offline
 script:
   - mvn -B -Pdeploy -Dgpg.skip=true verify
 email:
