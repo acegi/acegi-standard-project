@@ -631,13 +631,25 @@
             <artifactId>maven-javadoc-plugin</artifactId>
           </plugin>
           <plugin>
-            <!-- has no impact unless "mvn site" used (typically only for packaging=maven-plugin artifacts) -->
-            <artifactId>maven-site-plugin</artifactId>
-          </plugin>
-          <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
           </plugin>
+          <plugin>
+            <!-- has no impact unless "mvn site" used (typically only for packaging=maven-plugin artifacts) -->
+            <artifactId>maven-site-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>github-site</id>
+      <activation>
+        <property>
+          <name>env.GITHUB_PASSWORD</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
           <plugin>
             <!-- has no impact unless "mvn site-deploy" used (typically only for packaging=maven-plugin artifacts) -->
             <groupId>com.github.github</groupId>
