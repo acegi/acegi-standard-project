@@ -178,6 +178,7 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>2.5.3</version>
           <configuration>
+            <preparationGoals>clean</preparationGoals>
             <useReleaseProfile>false</useReleaseProfile>
             <autoVersionSubmodules>true</autoVersionSubmodules>
           </configuration>
@@ -582,20 +583,20 @@
           </reportSet>
         </reportSets>
       </plugin>
-    <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>versions-maven-plugin</artifactId>
-      <reportSets>
-        <reportSet>
-          <reports>
-            <report>dependency-updates-report</report>
-            <report>plugin-updates-report</report>
-            <report>property-updates-report</report>
-          </reports>
-        </reportSet>
-      </reportSets>
-    </plugin>
-    <plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>dependency-updates-report</report>
+              <report>plugin-updates-report</report>
+              <report>property-updates-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <reportSets>
           <reportSet>
@@ -630,6 +631,9 @@
           </plugin>
         </plugins>
       </build>
+    </profile>
+    <profile>
+      <id>release-tag</id>
     </profile>
     <profile>
       <id>deploy</id>
