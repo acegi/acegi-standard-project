@@ -18,7 +18,9 @@
     <property name="eachLine" value="true"/>
   </module>
   <!-- http://checkstyle.sourceforge.net/config_misc.html -->
-  <module name="NewlineAtEndOfFile"/>
+  <module name="NewlineAtEndOfFile">
+    <property name="lineSeparator" value="lf"/>
+  </module>
   <module name="UniqueProperties"/>
   <!-- http://checkstyle.sourceforge.net/config_sizes.html -->
   <module name="FileLength">
