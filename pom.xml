@@ -232,17 +232,17 @@
               </goals>
               <configuration>
                 <rules>
-                  <banDistributionManagement />
-                  <dependencyConvergence />
+                  <banDistributionManagement/>
+                  <dependencyConvergence/>
                   <requireJavaVersion>
                     <version>[${maven.enforcer.java},)</version>
                   </requireJavaVersion>
-                  <requireNoRepositories />
-                  <requirePluginVersions />
+                  <requireNoRepositories/>
+                  <requirePluginVersions/>
                   <requireReleaseDeps>
                     <onlyWhenRelease>true</onlyWhenRelease>
                   </requireReleaseDeps>
-                  <requireUpperBoundDeps />
+                  <requireUpperBoundDeps/>
                 </rules>
               </configuration>
             </execution>
@@ -383,22 +383,6 @@
           </configuration>
         </plugin>
         <!-- Third party plugins: Maven services -->
-        <plugin>
-          <groupId>com.github.github</groupId>
-          <artifactId>site-maven-plugin</artifactId>
-          <version>0.12</version>
-          <executions>
-            <execution>
-              <phase>site-deploy</phase>
-              <goals>
-                <goal>site</goal>
-              </goals>
-              <configuration>
-                <message>Building site for ${project.version}</message>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
         <plugin>
           <groupId>org.basepom.maven</groupId>
           <artifactId>duplicate-finder-maven-plugin</artifactId>
@@ -680,8 +664,22 @@
         <plugins>
           <plugin>
             <!-- has no impact unless "mvn site-deploy" used (typically only for packaging=maven-plugin artifacts) -->
+            <!-- the full site-maven-plugin is configured here as it has non-Central dependency that makes it problematic via mvn dependency:go-offline; see https://github.com/github/maven-plugins/issues/74 -->
+            <!-- if this profile is enabled, users can still use "mvn -DexcludeGroupIds=com.github.github dependency:go-offline" -->
             <groupId>com.github.github</groupId>
             <artifactId>site-maven-plugin</artifactId>
+            <version>0.12</version>
+            <executions>
+              <execution>
+                <phase>site-deploy</phase>
+                <goals>
+                  <goal>site</goal>
+                </goals>
+                <configuration>
+                  <message>Building site for ${project.version}</message>
+                </configuration>
+              </execution>
+            </executions>
           </plugin>
         </plugins>
       </build>
