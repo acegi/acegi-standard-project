@@ -473,11 +473,10 @@
         <plugin>
           <groupId>au.com.acegi</groupId>
           <artifactId>xml-format-maven-plugin</artifactId>
-          <version>3.0.3</version>
+          <version>3.0.4</version>
           <executions>
             <execution>
               <id>config-xml-format</id>
-              <phase>verify</phase>
               <goals>
                 <goal>xml-format</goal>
               </goals>
