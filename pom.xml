@@ -515,7 +515,7 @@
             </execution>
             <execution>
               <id>config-license-update-file-header</id>
-              <phase>verify</phase>
+              <phase>prepare-package</phase>
               <goals>
                 <goal>update-file-header</goal>
               </goals>
