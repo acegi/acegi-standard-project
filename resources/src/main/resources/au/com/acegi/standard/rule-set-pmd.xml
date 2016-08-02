@@ -21,6 +21,7 @@
   </rule>
   <rule ref="rulesets/java/finalizers.xml"/>
   <rule ref="rulesets/java/imports.xml">
+    <exclude name="UnusedImports"/>
     <exclude name="TooManyStaticImports"/>
   </rule>
   <rule ref="rulesets/java/j2ee.xml/UseProperClassLoader"/>
@@ -32,6 +33,7 @@
     <exclude name="ShortMethodName"/>
     <exclude name="ShortVariable"/>
     <exclude name="LongVariable"/>
+    <exclude name="MethodNamingConventions"/>
   </rule>
   <rule ref="rulesets/java/optimizations.xml"/>
   <rule ref="rulesets/java/strictexception.xml"/>
