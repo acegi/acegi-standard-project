@@ -392,9 +392,10 @@
                 <failBuildInCaseOfEqualContentConflict>true</failBuildInCaseOfEqualContentConflict>
                 <failBuildInCaseOfConflict>true</failBuildInCaseOfConflict>
                 <ignoredResourcePatterns>
-                  <ignoredResourcePattern>LICENSE.TXT</ignoredResourcePattern>
-                  <ignoredResourcePattern>THIRD-PARTY.TXT</ignoredResourcePattern>
+                  <ignoredResourcePattern>LICENSE.*</ignoredResourcePattern>
+                  <ignoredResourcePattern>THIRD-PARTY.*</ignoredResourcePattern>
                   <ignoredResourcePattern>.netbeans_automatic_build</ignoredResourcePattern>
+                  <ignoredResourcePattern>.*\.html</ignoredResourcePattern>
                 </ignoredResourcePatterns>
               </configuration>
             </execution>
