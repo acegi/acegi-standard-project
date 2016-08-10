@@ -626,7 +626,7 @@
       <id>acegi-standard-project-build-xml-format</id>
       <activation>
         <file>
-          <exists>test/src/it/acegi-internal/pom.xml</exists>
+          <exists>format-xml</exists>
         </file>
       </activation>
       <build>
