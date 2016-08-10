@@ -134,10 +134,6 @@
           <version>2.19.1</version>
         </plugin>
         <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
@@ -166,6 +162,20 @@
           <version>2.9</version>
         </plugin>
         <!-- Official Maven plugins with non-default configuration -->
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              </manifest>
+              <manifestEntries>
+                <Implementation-Build>${buildNumber}</Implementation-Build>
+              </manifestEntries>
+            </archive>
+          </configuration>
+        </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
           <version>2.5.3</version>
@@ -428,6 +438,25 @@
               <version>${acegi.standard.resources.version}</version>
             </dependency>
           </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>buildnumber-maven-plugin</artifactId>
+          <version>1.4</version>
+          <executions>
+            <execution>
+              <phase>initialize</phase>
+              <goals>
+                <goal>create</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <doCheck>false</doCheck>
+            <doUpdate>false</doUpdate>
+            <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+            <shortRevisionLength>7</shortRevisionLength>
+          </configuration>
         </plugin>
         <!-- Third party plugins: Java source -->
         <plugin>
