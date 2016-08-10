@@ -35,6 +35,16 @@
     <url>git@github.com:${github.org}/${github.repo}.git</url>
     <tag>HEAD</tag>
   </scm>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
   <properties>
     <acegi.standard.resources.version>0.0.5-SNAPSHOT</acegi.standard.resources.version>
     <github.global.server>github</github.global.server>
@@ -235,7 +245,6 @@
               </goals>
               <configuration>
                 <rules>
-                  <banDistributionManagement/>
                   <dependencyConvergence/>
                   <requireJavaVersion>
                     <version>[${maven.enforcer.java},)</version>
@@ -643,16 +652,6 @@
     </profile>
     <profile>
       <id>deploy</id>
-      <distributionManagement>
-        <snapshotRepository>
-          <id>ossrh</id>
-          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-          <id>ossrh</id>
-          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-      </distributionManagement>
       <build>
         <plugins>
           <plugin>

@@ -46,6 +46,16 @@
     <system>travis-ci</system>
     <url>https://travis-ci.org/${github.org}/${github.repo}</url>
   </ciManagement>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>nexus</id>
+      <url>http://nexus.internal.foo.corp:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus</id>
+      <url>http://nexus.internal.foo.corp:8081/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
   <properties>
     <github.org>foo-corp</github.org>
     <github.repo>super-project</github.repo>
