@@ -162,6 +162,11 @@ version number for ongoing development. Travis will perform the actual release.
 A developer (or Travis if setup appropriately) can also use
 `mvn -Pdeploy deploy` to deploy snapshot versions.
 
+## Snapshots
+
+Travis CI automatically publishes snapshot releases to the
+[OSS Sonatype Snapshots Repository](https://oss.sonatype.org/content/repositories/snapshots/au/com/acegi/acegi-standard-project).
+
 ## License
 
 This project is licensed under the
