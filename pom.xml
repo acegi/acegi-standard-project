@@ -502,12 +502,13 @@
               <goals>
                 <goal>check</goal>
               </goals>
-              <configuration>
-                <failOnError>true</failOnError>
-                <includeTests>true</includeTests>
-              </configuration>
             </execution>
           </executions>
+          <configuration>
+            <excludeFilterFile>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/findbugs-exclude.xml</excludeFilterFile>
+            <failOnError>true</failOnError>
+            <includeTests>true</includeTests>
+          </configuration>
         </plugin>
         <!-- Third party plugins: other -->
         <plugin>
