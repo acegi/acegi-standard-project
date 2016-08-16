@@ -331,11 +331,20 @@
               <id>config-pmd</id>
               <goals>
                 <goal>check</goal>
+                <goal>cpd</goal>
                 <goal>cpd-check</goal>
               </goals>
             </execution>
           </executions>
           <configuration>
+            <outputDirectory>${project.build.directory}/pmd/html</outputDirectory>
+            <targetDirectory>${project.build.directory}/pmd/xml</targetDirectory>
+            <excludeRoots>
+              <excludeRoot>${project.build.directory}/generated-sources/java</excludeRoot>
+              <excludeRoot>${project.build.directory}/generated-sources/annotations</excludeRoot>
+              <excludeRoot>${project.build.directory}/generated-test-sources/java</excludeRoot>
+              <excludeRoot>${project.build.directory}/generated-test-sources/annotations</excludeRoot>
+            </excludeRoots>
             <printFailingErrors>true</printFailingErrors>
             <includeTests>true</includeTests>
             <rulesets>
