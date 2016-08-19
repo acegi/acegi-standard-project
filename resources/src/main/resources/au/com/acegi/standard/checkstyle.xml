@@ -75,7 +75,6 @@
     </module>
     <module name="VisibilityModifier"/>
     <!-- http://checkstyle.sourceforge.net/config_coding.html -->
-    <module name="ArrayTrailingComma"/>
     <module name="CovariantEquals"/>
     <module name="DeclarationOrder"/>
     <module name="DefaultComesLast"/>
