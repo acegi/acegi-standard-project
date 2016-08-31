@@ -321,6 +321,11 @@
               <artifactId>acegi-standard-resources</artifactId>
               <version>${acegi.standard.resources.version}</version>
             </dependency>
+            <dependency>
+              <groupId>com.puppycrawl.tools</groupId>
+              <artifactId>checkstyle</artifactId>
+              <version>7.1</version>
+            </dependency>
           </dependencies>
         </plugin>
         <plugin>
