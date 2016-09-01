@@ -6,9 +6,9 @@ jdk: oraclejdk8
 email:
   - ben.alex@acegi.com.au
 install:
-  - mvn -B -Pdeploy -V dependency:go-offline
+  - mvn -B -Pdeploy --settings .travis-settings.xml -V dependency:go-offline
 script:
-  - mvn -B -Pdeploy -Dgpg.skip=true verify
+  - mvn -B -Pdeploy --settings .travis-settings.xml -Dgpg.skip=true verify
 after_success:
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_TAG" == "" ]; then echo $GPG_KEY | base64 --decode | gpg --batch --fast-import -; fi
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_TAG" == "" ]; then mvn -B -Pdeploy --settings .travis-settings.xml deploy; fi
