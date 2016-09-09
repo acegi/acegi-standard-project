@@ -75,6 +75,7 @@
     </module>
     <module name="VisibilityModifier">
       <property name="allowPublicFinalFields" value="true"/>
+      <property name="ignoreAnnotationCanonicalNames" value="org.junit.Rule, org.junit.ClassRule, org.junit.runners.Parameterized.Parameter"/>
     </module>
     <!-- http://checkstyle.sourceforge.net/config_coding.html -->
     <module name="CovariantEquals"/>
