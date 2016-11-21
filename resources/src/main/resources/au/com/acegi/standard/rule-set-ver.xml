@@ -4,5 +4,6 @@
     <ignoreVersion type="regex">.*Alpha.*</ignoreVersion>
     <ignoreVersion type="regex">.*beta.*</ignoreVersion>
     <ignoreVersion type="regex">.*atlassian.*</ignoreVersion>
+    <ignoreVersion type="regex">.*3.0.1u.*</ignoreVersion>
   </ignoreVersions>
 </ruleset>
