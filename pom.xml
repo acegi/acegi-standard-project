@@ -541,6 +541,13 @@
             <failOnError>true</failOnError>
             <includeTests>true</includeTests>
           </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.codehaus.groovy</groupId>
+              <artifactId>groovy</artifactId>
+              <version>2.4.9</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <!-- Third party plugins: other -->
         <plugin>
