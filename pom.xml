@@ -293,6 +293,8 @@
                 <goal>analyze-only</goal>
               </goals>
               <configuration>
+                <!-- Pending https://issues.apache.org/jira/browse/MDEP-559 (Java 9) -->
+                <skip>true</skip>
                 <failOnWarning>true</failOnWarning>
               </configuration>
             </execution>
