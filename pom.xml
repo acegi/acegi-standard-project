@@ -539,6 +539,8 @@
             </execution>
           </executions>
           <configuration>
+            <!-- Java 9 support unreleased; may need to switch to https://spotbugs.github.io/ -->
+            <skip>true</skip>
             <excludeFilterFile>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/findbugs-exclude.xml</excludeFilterFile>
             <failOnError>true</failOnError>
             <includeTests>true</includeTests>
