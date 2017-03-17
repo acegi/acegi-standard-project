@@ -2,6 +2,9 @@
 
 <module name="Checker">
   <property name="fileExtensions" value="java, properties, xml"/>
+  <module name="BeforeExecutionExclusionFileFilter">
+    <property name="fileNamePattern" value="module\-info\.java$"/>
+  </module>
   <module name="SuppressionFilter">
     <property name="file" value="${checkstyle.suppressions.file}"/>
   </module>
