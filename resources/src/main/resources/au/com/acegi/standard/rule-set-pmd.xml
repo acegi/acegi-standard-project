@@ -19,6 +19,7 @@
   <rule ref="rulesets/java/coupling.xml/LooseCoupling"/>
   <rule ref="rulesets/java/design.xml">
     <exclude name="FieldDeclarationsShouldBeAtStartOfClass"/>
+    <exclude name="AccessorMethodGeneration"/>
   </rule>
   <rule ref="rulesets/java/finalizers.xml"/>
   <rule ref="rulesets/java/imports.xml">
