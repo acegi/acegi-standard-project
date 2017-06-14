@@ -56,6 +56,7 @@
     <maven.enforcer.java>1.8</maven.enforcer.java>
     <pmd.ruleset>/au/com/acegi/standard/rule-set-pmd.xml</pmd.ruleset>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <trimStackTrace>false</trimStackTrace>
   </properties>
   <modules>
     <module>resources</module>
