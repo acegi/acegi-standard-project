@@ -54,6 +54,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.enforcer.java>1.8</maven.enforcer.java>
+    <maven.enforcer.mvn>3.5.2</maven.enforcer.mvn>
     <pmd.ruleset>/au/com/acegi/standard/rule-set-pmd.xml</pmd.ruleset>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <trimStackTrace>false</trimStackTrace>
@@ -276,6 +277,9 @@
               <configuration>
                 <rules>
                   <dependencyConvergence/>
+                  <requireMavenVersion>
+                    <version>[${maven.enforcer.mvn},)</version>
+                  </requireMavenVersion>
                   <requireJavaVersion>
                     <version>[${maven.enforcer.java},)</version>
                   </requireJavaVersion>
