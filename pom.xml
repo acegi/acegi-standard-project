@@ -537,30 +537,21 @@
           </executions>
         </plugin>
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>findbugs-maven-plugin</artifactId>
-          <version>3.0.5</version>
+          <groupId>com.github.spotbugs</groupId>
+          <artifactId>spotbugs-maven-plugin</artifactId>
+          <version>3.1.1</version>
           <executions>
             <execution>
-              <id>config-findbugs</id>
+              <id>config-spotbugs</id>
               <goals>
                 <goal>check</goal>
               </goals>
             </execution>
           </executions>
           <configuration>
-            <!-- Java 9 support unreleased; may need to switch to https://spotbugs.github.io/ -->
-            <excludeFilterFile>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/findbugs-exclude.xml</excludeFilterFile>
-            <failOnError>true</failOnError>
+            <excludeFilterFile>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/findbugs-filter.xml</excludeFilterFile>
             <includeTests>true</includeTests>
           </configuration>
-          <dependencies>
-            <dependency>
-              <groupId>org.codehaus.groovy</groupId>
-              <artifactId>groovy</artifactId>
-              <version>2.4.13</version>
-            </dependency>
-          </dependencies>
         </plugin>
         <!-- Third party plugins: other -->
         <plugin>
