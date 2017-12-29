@@ -549,7 +549,7 @@
             </execution>
           </executions>
           <configuration>
-            <excludeFilterFile>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/findbugs-filter.xml</excludeFilterFile>
+            <excludeFilterFile>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/spotbugs-filter.xml</excludeFilterFile>
             <includeTests>true</includeTests>
           </configuration>
         </plugin>
