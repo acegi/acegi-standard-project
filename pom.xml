@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>au.com.acegi</groupId>
   <artifactId>acegi-standard-project</artifactId>
-  <version>0.1.6</version>
+  <version>0.1.7-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Acegi Standard Project</name>
   <description>Conventions and configurations to simplify the long-term development of Java projects.</description>
@@ -33,7 +33,7 @@
     <connection>scm:git:git@github.com:${github.org}/${github.repo}.git</connection>
     <developerConnection>scm:git:git@github.com:${github.org}/${github.repo}.git</developerConnection>
     <url>git@github.com:${github.org}/${github.repo}.git</url>
-    <tag>acegi-standard-project-0.1.6</tag>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -46,7 +46,7 @@
     </repository>
   </distributionManagement>
   <properties>
-    <acegi.standard.resources.version>0.1.6</acegi.standard.resources.version>
+    <acegi.standard.resources.version>0.1.7-SNAPSHOT</acegi.standard.resources.version>
     <github.global.server>github</github.global.server>
     <github.org>acegi</github.org>
     <github.repo>acegi-standard-project</github.repo>
