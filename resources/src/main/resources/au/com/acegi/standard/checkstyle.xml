@@ -233,8 +233,9 @@
       <property name="tokens" value="PACKAGE_DEF,CLASS_DEF,INTERFACE_DEF,ENUM_DEF,STATIC_INIT,INSTANCE_INIT,METHOD_DEF,CTOR_DEF,VARIABLE_DEF"/>
     </module>
     <module name="GenericWhitespace"/>
-    <module name="MethodParamPad"/>
-    <module name="NoLineWrap"/>
+    <module name="MethodParamPad">
+      <property name="allowLineBreaks" value="true"/>
+    </module>
     <module name="NoWhitespaceAfter">
       <property name="tokens" value="ARRAY_INIT"/>
       <property name="tokens" value="BNOT"/>
