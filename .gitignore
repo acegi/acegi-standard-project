@@ -3,3 +3,5 @@ target
 *.releaseBackup
 *.log
 release.properties
+.idea
+*.iml
