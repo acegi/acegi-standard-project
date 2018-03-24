@@ -387,6 +387,7 @@
             </excludeRoots>
             <printFailingErrors>true</printFailingErrors>
             <includeTests>true</includeTests>
+            <analysisCache>true</analysisCache>
             <rulesets>
               <ruleset>${pmd.ruleset}</ruleset>
             </rulesets>
