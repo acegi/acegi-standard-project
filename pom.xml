@@ -401,7 +401,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>3.5</version>
+          <version>3.5.1</version>
           <executions>
             <execution>
               <id>default-descriptor</id>
