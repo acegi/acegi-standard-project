@@ -6,6 +6,7 @@
   <!-- To avoid similar @SuppressWarnings, Checkstyle used in favour of PMD -->
   <rule ref="category/java/bestpractices.xml">
     <exclude name="AccessorMethodGeneration"/>
+    <exclude name="OneDeclarationPerLine"/>
     <exclude name="JUnitAssertionsShouldIncludeMessage"/>
     <exclude name="JUnitTestContainsTooManyAsserts"/>
     <exclude name="JUnitTestsShouldIncludeAssert"/>
