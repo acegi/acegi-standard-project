@@ -1,53 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset xmlns="http://pmd.sf.net/ruleset/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="mybraces" xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd" xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="mybraces" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
   <exclude-pattern>.*/generated-sources/.*</exclude-pattern>
   <exclude-pattern>.*/generated-test-sources/.*</exclude-pattern>
-  <rule ref="rulesets/java/basic.xml"/>
-  <rule ref="rulesets/java/braces.xml"/>
-  <rule ref="rulesets/java/clone.xml"/>
-  <rule ref="rulesets/java/codesize.xml">
+  <description>Acegi Standard Project PMD Rules</description>
+  <!-- To avoid similar @SuppressWarnings, Checkstyle used in favour of PMD -->
+  <rule ref="category/java/bestpractices.xml">
+    <exclude name="AccessorMethodGeneration"/>
+    <exclude name="JUnitAssertionsShouldIncludeMessage"/>
+    <exclude name="JUnitTestContainsTooManyAsserts"/>
+    <exclude name="JUnitTestsShouldIncludeAssert"/>
+  </rule>
+  <rule ref="category/java/design.xml">
+    <exclude name="DataClass"/>
+    <exclude name="ExcessiveClassLength"/>
+    <exclude name="ExcessiveImports"/>
+    <exclude name="ExcessiveMethodLength"/>
     <exclude name="ExcessivePublicCount"/>
+    <exclude name="LawOfDemeter"/>
+    <exclude name="LoosePackageCoupling"/>
+    <exclude name="NcssCount"/>
+    <exclude name="TooManyFields"/>
     <exclude name="TooManyMethods"/>
   </rule>
-  <rule ref="rulesets/java/controversial.xml/UnnecessaryConstructor"/>
-  <rule ref="rulesets/java/controversial.xml/SuspiciousOctalEscape"/>
-  <rule ref="rulesets/java/controversial.xml/CallSuperInConstructor"/>
-  <rule ref="rulesets/java/controversial.xml/UnnecessaryParentheses"/>
-  <rule ref="rulesets/java/controversial.xml/AvoidUsingShortType"/>
-  <rule ref="rulesets/java/controversial.xml/DoNotCallGarbageCollectionExplicitly"/>
-  <rule ref="rulesets/java/controversial.xml/AvoidLiteralsInIfCondition"/>
-  <rule ref="rulesets/java/coupling.xml/LooseCoupling"/>
-  <rule ref="rulesets/java/design.xml">
-    <exclude name="FieldDeclarationsShouldBeAtStartOfClass"/>
-    <exclude name="AccessorMethodGeneration"/>
-  </rule>
-  <rule ref="rulesets/java/finalizers.xml"/>
-  <rule ref="rulesets/java/imports.xml">
-    <exclude name="UnusedImports"/>
-    <exclude name="TooManyStaticImports"/>
-  </rule>
-  <rule ref="rulesets/java/j2ee.xml/UseProperClassLoader"/>
-  <rule ref="rulesets/java/j2ee.xml/DoNotCallSystemExit"/>
-  <rule ref="rulesets/java/j2ee.xml/DoNotUseThreads"/>
-  <rule ref="rulesets/java/migrating.xml"/>
-  <rule ref="rulesets/java/naming.xml">
-    <exclude name="ShortClassName"/>
-    <exclude name="ShortMethodName"/>
-    <exclude name="ShortVariable"/>
-    <exclude name="LongVariable"/>
-    <exclude name="MethodNamingConventions"/>
-  </rule>
-  <rule ref="rulesets/java/optimizations.xml"/>
-  <rule ref="rulesets/java/strictexception.xml"/>
-  <rule ref="rulesets/java/strings.xml">
+  <rule ref="category/java/errorprone.xml">
     <exclude name="AvoidDuplicateLiterals"/>
+    <exclude name="BeanMembersShouldSerialize"/>
+    <exclude name="DataflowAnomalyAnalysis"/>
+    <exclude name="DontImportSun"/>
   </rule>
-  <rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals">
+  <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
     <properties>
       <property name="skipAnnotations" value="true"/>
     </properties>
   </rule>
-  <rule ref="rulesets/java/sunsecure.xml"/>
-  <rule ref="rulesets/java/unusedcode.xml"/>
-  <rule ref="rulesets/java/typeresolution.xml"/>
+  <rule ref="category/java/multithreading.xml">
+    <exclude name="UseConcurrentHashMap"/>
+  </rule>
+  <rule ref="category/java/performance.xml"/>
 </ruleset>

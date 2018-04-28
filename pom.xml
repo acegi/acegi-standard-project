@@ -56,6 +56,7 @@
     <maven.enforcer.java>1.8</maven.enforcer.java>
     <maven.enforcer.mvn>3.5.2</maven.enforcer.mvn>
     <pmd.ruleset>/au/com/acegi/standard/rule-set-pmd.xml</pmd.ruleset>
+    <pmd.version>6.2.0</pmd.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <trimStackTrace>false</trimStackTrace>
   </properties>
@@ -397,6 +398,26 @@
               <groupId>au.com.acegi</groupId>
               <artifactId>acegi-standard-resources</artifactId>
               <version>${acegi.standard.resources.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-core</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-java</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-javascript</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-jsp</artifactId>
+              <version>${pmd.version}</version>
             </dependency>
           </dependencies>
         </plugin>
