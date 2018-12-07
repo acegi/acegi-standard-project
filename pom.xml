@@ -540,12 +540,19 @@
             <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
             <shortRevisionLength>7</shortRevisionLength>
           </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.scm</groupId>
+              <artifactId>maven-scm-provider-jgit</artifactId>
+              <version>1.11.1</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <!-- Third party plugins: Java source -->
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.1</version>
+          <version>0.8.2</version>
           <executions>
             <execution>
               <id>config-jacoco-prepare-agent</id>
