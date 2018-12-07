@@ -487,6 +487,9 @@
                   <ignoredResourcePattern>.netbeans_automatic_build</ignoredResourcePattern>
                   <ignoredResourcePattern>.*\.html</ignoredResourcePattern>
                 </ignoredResourcePatterns>
+                <ignoredClassPatterns>
+                  <ignoredClassPattern>.*module-info</ignoredClassPattern>
+                </ignoredClassPatterns>
               </configuration>
             </execution>
           </executions>
