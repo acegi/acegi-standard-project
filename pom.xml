@@ -538,6 +538,10 @@
           <configuration>
             <doCheck>false</doCheck>
             <doUpdate>false</doUpdate>
+            <revisionOnScmFailure>UNKNOWN</revisionOnScmFailure>
+            <providerImplementations>
+              <git>jgit</git>
+            </providerImplementations>
             <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
             <shortRevisionLength>7</shortRevisionLength>
           </configuration>
