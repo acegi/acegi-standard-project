@@ -547,6 +547,7 @@
             <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
             <shortRevisionLength>7</shortRevisionLength>
           </configuration>
+          <!-- 1.11.2 blocked by https://issues.apache.org/jira/browse/SCM-925 -->
           <dependencies>
             <dependency>
               <groupId>org.apache.maven.scm</groupId>
