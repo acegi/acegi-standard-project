@@ -312,7 +312,6 @@
               </configuration>
             </execution>
             <execution>
-              <!-- Needed due to https://github.com/mojohaus/versions-maven-plugin/issues/97 and https://github.com/checkstyle/checkstyle/issues/62, but also potentially useful for easy IDE plugin access to resource files -->
               <id>maven-dependency-unpack</id>
               <phase>generate-sources</phase>
               <goals>
@@ -345,8 +344,8 @@
               </goals>
               <configuration>
                 <!-- user can override with <checkstyle.config.location> property -->
-                <configLocation>/au/com/acegi/standard/checkstyle.xml</configLocation>
-                <suppressionsLocation>/au/com/acegi/standard/checkstyle-suppressions.xml</suppressionsLocation>
+                <configLocation>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/checkstyle.xml</configLocation>
+                <suppressionsLocation>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/checkstyle-suppressions.xml</suppressionsLocation>
                 <consoleOutput>true</consoleOutput>
                 <failsOnError>true</failsOnError>
                 <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -354,11 +353,6 @@
             </execution>
           </executions>
           <dependencies>
-            <dependency>
-              <groupId>au.com.acegi</groupId>
-              <artifactId>acegi-standard-resources</artifactId>
-              <version>${acegi.standard.resources.version}</version>
-            </dependency>
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
