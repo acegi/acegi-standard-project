@@ -30,6 +30,10 @@
     <property name="max" value="1000"/>
     <property name="fileExtensions" value="java"/>
   </module>
+  <module name="LineLength">
+    <property name="max" value="100"/>
+    <property name="ignorePattern" value="^ *\* *[^ ]+$"/>
+  </module>
   <module name="TreeWalker">
     <property name="tabWidth" value="2"/>
     <!-- http://checkstyle.sourceforge.net/config_annotation.html -->
@@ -64,7 +68,7 @@
     <module name="DesignForExtension">
       <!--
         We should postpone DesignForExtension Check enforcement till next major release
-        as it will seriously brake backward compatibility with existing usage of our library
+        as it will seriously break backward compatibility with existing usage of our library
       -->
     </module>
     <module name="FinalClass"/>
@@ -145,10 +149,7 @@
     <!-- http://checkstyle.sourceforge.net/config_javadoc.html -->
     <module name="AtclauseOrder"/>
     <module name="JavadocMethod">
-      <property name="allowMissingJavadoc" value="true"/>
-      <property name="allowUndeclaredRTE" value="true"/>
-      <property name="allowThrowsTagsForSubclasses" value="true"/>
-      <property name="allowMissingPropertyJavadoc" value="true"/>
+      <property name="scope" value="public"/>
     </module>
     <module name="JavadocParagraph">
       <property name="allowNewlineParagraph" value="false"/>
@@ -214,10 +215,6 @@
     <module name="AnonInnerLength"/>
     <module name="ExecutableStatementCount">
       <property name="max" value="30"/>
-    </module>
-    <module name="LineLength">
-      <property name="max" value="100"/>
-      <property name="ignorePattern" value="^ *\* *[^ ]+$"/>
     </module>
     <module name="MethodLength">
       <property name="tokens" value="METHOD_DEF"/>
