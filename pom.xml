@@ -291,16 +291,8 @@
           </executions>
         </plugin>
         <plugin>
-          <!-- When 3.1.2 released can remove maven-dependency-analyzer dependency (needed due to https://issues.apache.org/jira/browse/MDEP-613) -->
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.1.1</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.apache.maven.shared</groupId>
-              <artifactId>maven-dependency-analyzer</artifactId>
-              <version>1.11.1</version>
-            </dependency>
-          </dependencies>
+          <version>3.1.2</version>
           <executions>
             <execution>
               <id>config-dependency</id>
@@ -323,12 +315,13 @@
                     <groupId>au.com.acegi</groupId>
                     <artifactId>acegi-standard-resources</artifactId>
                     <version>${acegi.standard.resources.version}</version>
-                    <overWrite>false</overWrite>
                     <outputDirectory>${project.build.directory}/acegi-standard-resources</outputDirectory>
                   </artifactItem>
                 </artifactItems>
                 <includes>**/*.xml</includes>
                 <silent>true</silent>
+                <overWriteSnapshots>true</overWriteSnapshots>
+                <overWriteReleases>true</overWriteReleases>
               </configuration>
             </execution>
           </executions>
