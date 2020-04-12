@@ -495,17 +495,10 @@
               </goals>
               <configuration>
                 <!-- user can override with <maven.version.rules> property -->
-                <rulesUri>file://${project.basedir}/target/acegi-standard-resources/au/com/acegi/standard/rule-set-ver.xml</rulesUri>
+                <rulesUri>file://${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/rule-set-ver.xml</rulesUri>
               </configuration>
             </execution>
           </executions>
-          <dependencies>
-            <dependency>
-              <groupId>au.com.acegi</groupId>
-              <artifactId>acegi-standard-resources</artifactId>
-              <version>${acegi.standard.resources.version}</version>
-            </dependency>
-          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
