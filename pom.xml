@@ -484,22 +484,6 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>versions-maven-plugin</artifactId>
           <version>2.7</version>
-          <executions>
-            <execution>
-              <id>config-versions</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>display-plugin-updates</goal>
-                <goal>display-parent-updates</goal>
-                <goal>display-property-updates</goal>
-                <goal>display-dependency-updates</goal>
-              </goals>
-              <configuration>
-                <!-- user can override with <maven.version.rules> property -->
-                <rulesUri>file://${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/rule-set-ver.xml</rulesUri>
-              </configuration>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -659,19 +643,6 @@
         </reportSets>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>versions-maven-plugin</artifactId>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>dependency-updates-report</report>
-              <report>plugin-updates-report</report>
-              <report>property-updates-report</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <reportSets>
           <reportSet>
@@ -691,6 +662,41 @@
     </plugins>
   </reporting>
   <profiles>
+    <profile>
+      <id>version-report</id>
+      <activation>
+        <property>
+          <name>!env.CI</name>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <!-- https://github.com/mojohaus/versions-maven-plugin/issues/390 -->
+            <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>versions-maven-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>config-versions</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>display-plugin-updates</goal>
+                    <goal>display-parent-updates</goal>
+                    <goal>display-property-updates</goal>
+                    <goal>display-dependency-updates</goal>
+                  </goals>
+                  <configuration>
+                    <!-- user can override with <maven.version.rules> property -->
+                    <rulesUri>file://${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/rule-set-ver.xml</rulesUri>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
     <profile>
       <id>acegi-standard-project-build-xml-format</id>
       <activation>
