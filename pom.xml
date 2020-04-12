@@ -177,9 +177,10 @@
           <artifactId>maven-assembly-plugin</artifactId>
           <version>3.2.0</version>
         </plugin>
+        <!-- Build fails with 3.2.1 -->
         <plugin>
           <artifactId>maven-invoker-plugin</artifactId>
-          <version>3.2.1</version>
+          <version>3.0.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
