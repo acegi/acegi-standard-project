@@ -55,7 +55,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.enforcer.java>1.8</maven.enforcer.java>
     <maven.enforcer.mvn>3.5.4</maven.enforcer.mvn>
-    <pmd.ruleset>file://${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/rule-set-pmd.xml</pmd.ruleset>
+    <pmd.ruleset>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/rule-set-pmd.xml</pmd.ruleset>
     <pmd.version>6.22.0</pmd.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <trimStackTrace>false</trimStackTrace>
