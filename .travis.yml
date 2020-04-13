@@ -10,8 +10,5 @@ install:
   - mvn -B -Pdeploy --settings .travis-settings.xml -V dependency:go-offline
 script:
   - mvn -B -Pdeploy --settings .travis-settings.xml -Dgpg.skip=true verify
-after_success:
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_TAG" == "" ]; then echo $GPG_KEY | base64 --decode | gpg --batch --fast-import -; fi
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_TAG" == "" ]; then mvn -B -Pdeploy --settings .travis-settings.xml deploy; fi
 after_failure:
   - tail -n 200 /home/travis/build/acegi/acegi-standard-project/test/target/it/acegi-internal/build.log
