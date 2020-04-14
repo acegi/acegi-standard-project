@@ -220,8 +220,8 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>2.5.3</version>
           <configuration>
-            <completionGoals>clean verify</completionGoals>
-            <preparationGoals>clean verify</preparationGoals>
+            <completionGoals>clean</completionGoals>
+            <preparationGoals>clean</preparationGoals>
             <useReleaseProfile>false</useReleaseProfile>
             <autoVersionSubmodules>true</autoVersionSubmodules>
           </configuration>
