@@ -39,7 +39,7 @@ jobs:
   deploy:
     needs: build
     if: github.event_name == 'push'
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: Check out Git repository
