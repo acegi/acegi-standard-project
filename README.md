@@ -16,12 +16,12 @@ Sonatype) etc.
 ## Performing A Release
 
 Project inheriting from Acegi Standard Project are configured with a continuous
-integration pipeline that attempts a snapshot JAR deployment on every Git push.
-Any person with commit access to these projects can initiate a versioned release
-by editing the relevant project POM versions (ie discard the `-SNAPSHOT` suffix)
-and creating a tag. Alternately, a project maintainer can locally execute
-`mvn -Prelease-tag release:clean release:prepare` to initiate a versioned
-release.
+integration pipeline that attempts a snapshot artifact deployment on every Git
+push. Any person with commit access to these projects can initiate a versioned
+release by editing the relevant project POM versions (ie discard the `-SNAPSHOT`
+suffix) and creating a tag. Alternately, a project maintainer can locally
+execute `mvn -Prelease-tag release:clean release:prepare` to initiate a
+versioned release.
 
 ## License
 
