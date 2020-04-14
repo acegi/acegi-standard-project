@@ -8,7 +8,7 @@ Acegi Standard Project is a super POM and resources file bundle that is used by
 several open source projects maintained by Acegi Technology. It integrates build
 pipeline services (eg GitHub Actions) and plugins for test coverage (JaCoCo,
 Codecov), build quality (reproducible builds, dependency updates, dependency
-usage, dependency duplication), code quality (PMD, Checkstyle, Spotbugs, source
+usage, dependency duplication), code quality (PMD, Checkstyle, SpotBugs, source
 duplication, XML formatting), licenses (headers, third party usage summaries),
 JAR packaging (manifest metadata, assembly), plugin sites, releases (OSS
 Sonatype) etc.
