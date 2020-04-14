@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+    name: Build and Verify
     runs-on: ubuntu-latest
 
     steps:
@@ -37,6 +38,7 @@ jobs:
         path: test/target/it/acegi-internal/build.log
 
   deploy:
+    name: Deploy to OSS Sonatype
     needs: build
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
