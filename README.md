@@ -1,4 +1,4 @@
-![Maven Build and Deployment](https://github.com/acegi/acegi-standard-project/workflows/Maven%20Build%20and%20Deployment/badge.svg)
+[![Maven Build and Deployment](https://github.com/acegi/acegi-standard-project/workflows/Maven%20Build%20and%20Deployment/badge.svg)](https://github.com/acegi/acegi-standard-project/actions)
 [![Maven Central](https://img.shields.io/maven-central/v/au.com.acegi/acegi-standard-project.svg?maxAge=3600)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22au.com.acegi%22%20AND%20a%3A%22acegi-standard-project%22)
 [![License](https://img.shields.io/hexpm/l/plug.svg?maxAge=2592000)](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
