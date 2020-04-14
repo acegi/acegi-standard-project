@@ -8,18 +8,20 @@ Acegi Standard Project is a super POM and resources file bundle that is used by
 several open source projects maintained by Acegi Technology. It integrates build
 pipeline services (eg GitHub Actions) and plugins for test coverage (JaCoCo,
 Codecov), build quality (reproducible builds, dependency updates, dependency
-duplication), code quality (PMD, Checkstyle, Spotbugs, XML formatting), licenses
-(headers, third party usage summaries), JAR packaging (manifest metadata,
-assembly), plugin sites, releases (OSS Sonatype) etc.
+usage, dependency duplication), code quality (PMD, Checkstyle, Spotbugs, source
+duplication, XML formatting), licenses (headers, third party usage summaries),
+JAR packaging (manifest metadata, assembly), plugin sites, releases (OSS
+Sonatype) etc.
 
 ## Performing A Release
 
 Project inheriting from Acegi Standard Project are configured with a continuous
-integration pipeine that attempts a release deployment on every Git push. Any
-person with commits access to these projects can perform an official release by
-by editing the relevant project POM versions (ie discard the `-SNAPSHOT` suffix)
+integration pipeline that attempts a JAR deployment on every Git push. Any
+person with commits access to these projects can initiate a versioned release by
+editing the relevant project POM versions (ie discard the `-SNAPSHOT` suffix)
 and creating a tag. Alternately, a project maintainer can locally execute
-`mvn -Prelease-tag release:clean release:prepare` to prepare the release.
+`mvn -Prelease-tag release:clean release:prepare` to initiate a versioned
+release.
 
 ## License
 
