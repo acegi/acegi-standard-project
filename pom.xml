@@ -711,7 +711,7 @@
       <id>release-tag</id>
     </profile>
     <profile>
-      <id>deploy</id>
+      <id>ossrh-deploy</id>
       <build>
         <plugins>
           <plugin>
