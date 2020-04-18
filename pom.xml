@@ -743,10 +743,6 @@
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
           </plugin>
-          <plugin>
-            <!-- has no impact unless "mvn site" used (typically only for packaging=maven-plugin artifacts) -->
-            <artifactId>maven-site-plugin</artifactId>
-          </plugin>
         </plugins>
       </build>
     </profile>
