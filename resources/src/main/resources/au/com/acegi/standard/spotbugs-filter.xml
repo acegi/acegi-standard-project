@@ -4,6 +4,9 @@
     <Package name="~.*\.codecs\..*"/>
   </Match>
   <Match>
+    <Package name="~.*\.codecs"/>
+  </Match>
+  <Match>
     <Package name="~.*\.generated"/>
   </Match>
   <Match>
