@@ -158,10 +158,6 @@
       <property name="offset" value="2"/>
     </module>
     <module name="JavadocType"/>
-    <module name="JavadocVariable">
-      <property name="scope" value="public"/>
-      <property name="ignoreNamePattern" value="tmp"/>
-    </module>
     <module name="NonEmptyAtclauseDescription"/>
     <module name="SingleLineJavadoc"/>
     <module name="SummaryJavadoc"/>
