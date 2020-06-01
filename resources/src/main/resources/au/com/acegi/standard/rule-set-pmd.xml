@@ -45,6 +45,8 @@
   </rule>
   <rule ref="category/java/multithreading.xml">
     <exclude name="UseConcurrentHashMap"/>
+    <exclude name="DoNotUseThreads"/>
+  </rule>
   <rule ref="category/java/performance.xml">
     <exclude name="AvoidInstantiatingObjectsInLoops"/>
   </rule>
