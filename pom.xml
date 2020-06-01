@@ -266,19 +266,19 @@
               </goals>
               <configuration>
                 <rules>
-                  <dependencyConvergence />
+                  <dependencyConvergence/>
                   <requireMavenVersion>
                     <version>[${maven.enforcer.mvn},)</version>
                   </requireMavenVersion>
                   <requireJavaVersion>
                     <version>[${maven.enforcer.java},)</version>
                   </requireJavaVersion>
-                  <requireNoRepositories />
-                  <requirePluginVersions />
+                  <requireNoRepositories/>
+                  <requirePluginVersions/>
                   <requireReleaseDeps>
                     <onlyWhenRelease>true</onlyWhenRelease>
                   </requireReleaseDeps>
-                  <requireUpperBoundDeps />
+                  <requireUpperBoundDeps/>
                 </rules>
               </configuration>
             </execution>
