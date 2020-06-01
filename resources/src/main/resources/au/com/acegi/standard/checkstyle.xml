@@ -128,7 +128,6 @@
       <property name="checkFields" value="false"/>
       <property name="checkMethods" value="false"/>
     </module>
-    <module name="ReturnCount"/>
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
     <module name="StringLiteralEquality"/>
