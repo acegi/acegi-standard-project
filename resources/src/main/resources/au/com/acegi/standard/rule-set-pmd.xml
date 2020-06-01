@@ -25,10 +25,16 @@
     <exclude name="TooManyMethods"/>
   </rule>
   <rule ref="category/java/errorprone.xml">
+    <exclude name="AssignmentInOperand"/>
     <exclude name="AvoidDuplicateLiterals"/>
     <exclude name="BeanMembersShouldSerialize"/>
     <exclude name="DataflowAnomalyAnalysis"/>
     <exclude name="DontImportSun"/>
+  </rule>
+  <rule ref="category/java/errorprone.xml/AssignmentInOperand">
+    <properties>
+      <property name="allowWhile" value="true"/>
+    </properties>
   </rule>
   <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
     <properties>
