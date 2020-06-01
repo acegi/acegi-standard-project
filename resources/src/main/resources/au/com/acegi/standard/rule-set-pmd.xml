@@ -28,6 +28,7 @@
     <exclude name="AssignmentInOperand"/>
     <exclude name="AvoidDuplicateLiterals"/>
     <exclude name="AvoidLiteralsInIfCondition"/>
+    <exclude name="CloseResource"/>
     <exclude name="BeanMembersShouldSerialize"/>
     <exclude name="DataflowAnomalyAnalysis"/>
     <exclude name="DontImportSun"/>
