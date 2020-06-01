@@ -212,9 +212,6 @@
     <module name="TypeName"/>
     <!-- http://checkstyle.sourceforge.net/config_sizes.html -->
     <module name="AnonInnerLength"/>
-    <module name="ExecutableStatementCount">
-      <property name="max" value="30"/>
-    </module>
     <module name="MethodLength">
       <property name="tokens" value="METHOD_DEF"/>
       <property name="max" value="120"/>
