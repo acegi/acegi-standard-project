@@ -180,9 +180,6 @@
       <property name="lineWrappingIndentation" value="4"/>
     </module>
     <module name="OuterTypeFilename"/>
-    <module name="UncommentedMain">
-      <property name="excludedClasses" value="\.Main$"/>
-    </module>
     <module name="UpperEll"/>
     <!-- http://checkstyle.sourceforge.net/config_modifier.html -->
     <module name="ModifierOrder"/>
