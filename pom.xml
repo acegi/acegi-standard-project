@@ -111,6 +111,7 @@
               <goals>
                 <goal>xml-format</goal>
               </goals>
+              <phase>package</phase>
               <configuration>
                 <indentSize>2</indentSize>
               </configuration>
@@ -139,7 +140,7 @@
               <goals>
                 <goal>sort</goal>
               </goals>
-              <phase>test</phase>
+              <phase>prepare-package</phase>
             </execution>
           </executions>
         </plugin>
@@ -260,19 +261,19 @@
               </goals>
               <configuration>
                 <rules>
-                  <dependencyConvergence />
+                  <dependencyConvergence/>
                   <requireMavenVersion>
                     <version>[${maven.enforcer.mvn},)</version>
                   </requireMavenVersion>
                   <requireJavaVersion>
                     <version>[${maven.enforcer.java},)</version>
                   </requireJavaVersion>
-                  <requireNoRepositories />
-                  <requirePluginVersions />
+                  <requireNoRepositories/>
+                  <requirePluginVersions/>
                   <requireReleaseDeps>
                     <onlyWhenRelease>true</onlyWhenRelease>
                   </requireReleaseDeps>
-                  <requireUpperBoundDeps />
+                  <requireUpperBoundDeps/>
                 </rules>
               </configuration>
             </execution>
