@@ -420,8 +420,8 @@
           <artifactId>maven-release-plugin</artifactId>
           <version>2.5.3</version>
           <configuration>
-            <completionGoals>clean</completionGoals>
-            <preparationGoals>clean</preparationGoals>
+            <completionGoals>clean xml-format:xml-format</completionGoals>
+            <preparationGoals>clean xml-format:xml-format</preparationGoals>
             <useReleaseProfile>false</useReleaseProfile>
             <autoVersionSubmodules>true</autoVersionSubmodules>
           </configuration>
