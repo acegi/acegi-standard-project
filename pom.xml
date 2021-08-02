@@ -147,7 +147,7 @@
         <plugin>
           <groupId>com.github.spotbugs</groupId>
           <artifactId>spotbugs-maven-plugin</artifactId>
-          <version>4.0.0</version>
+          <version>4.3.0</version>
           <configuration>
             <excludeFilterFile>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/spotbugs-filter.xml</excludeFilterFile>
             <includeTests>true</includeTests>
