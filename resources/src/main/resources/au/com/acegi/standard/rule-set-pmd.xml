@@ -13,6 +13,7 @@
   </rule>
   <rule ref="category/java/design.xml">
     <exclude name="AvoidCatchingGenericException"/>
+    <exclude name="CognitiveComplexity"/>
     <exclude name="DataClass"/>
     <exclude name="ExcessiveClassLength"/>
     <exclude name="ExcessiveImports"/>
