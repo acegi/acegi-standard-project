@@ -152,7 +152,7 @@
     <!-- http://checkstyle.sourceforge.net/config_javadoc.html -->
     <module name="AtclauseOrder"/>
     <module name="JavadocMethod">
-      <property name="scope" value="public"/>
+      <property name="accessModifiers" value="public"/>
     </module>
     <module name="JavadocParagraph">
       <property name="allowNewlineParagraph" value="false"/>
