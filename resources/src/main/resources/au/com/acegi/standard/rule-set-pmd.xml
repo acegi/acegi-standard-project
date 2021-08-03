@@ -7,6 +7,7 @@
   <rule ref="category/java/bestpractices.xml">
     <exclude name="AccessorMethodGeneration"/>
     <exclude name="OneDeclarationPerLine"/>
+    <exclude name="GuardLogStatement"/>
     <exclude name="JUnitAssertionsShouldIncludeMessage"/>
     <exclude name="JUnitTestContainsTooManyAsserts"/>
     <exclude name="JUnitTestsShouldIncludeAssert"/>
