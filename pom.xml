@@ -700,7 +700,7 @@
       <id>version-report</id>
       <activation>
         <property>
-          <name>!env.CI</name>
+          <name>env.VERSIONS_REPORT</name>
         </property>
       </activation>
       <build>
