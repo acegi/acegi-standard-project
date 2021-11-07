@@ -28,6 +28,7 @@
   </rule>
   <rule ref="category/java/errorprone.xml">
     <exclude name="AssignmentInOperand"/>
+    <exclude name="AvoidAccessibilityAlteration"/>
     <exclude name="AvoidDuplicateLiterals"/>
     <exclude name="AvoidLiteralsInIfCondition"/>
     <exclude name="CloseResource"/>
