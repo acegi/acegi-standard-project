@@ -473,7 +473,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>buildnumber-maven-plugin</artifactId>
-          <version>1.4</version>
+          <version>3.0.0</version>
           <configuration>
             <doCheck>false</doCheck>
             <doUpdate>false</doUpdate>
@@ -484,18 +484,6 @@
             <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
             <shortRevisionLength>7</shortRevisionLength>
           </configuration>
-          <dependencies>
-            <dependency>
-              <groupId>org.apache.maven.scm</groupId>
-              <artifactId>maven-scm-api</artifactId>
-              <version>1.12.0</version>
-            </dependency>
-            <dependency>
-              <groupId>org.apache.maven.scm</groupId>
-              <artifactId>maven-scm-provider-jgit</artifactId>
-              <version>1.12.0</version>
-            </dependency>
-          </dependencies>
           <executions>
             <execution>
               <goals>
