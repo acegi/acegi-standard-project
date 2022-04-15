@@ -20,6 +20,7 @@
     <exclude name="ExcessiveImports"/>
     <exclude name="ExcessiveMethodLength"/>
     <exclude name="ExcessivePublicCount"/>
+    <exclude name="ImmutableField"/>
     <exclude name="LawOfDemeter"/>
     <exclude name="LoosePackageCoupling"/>
     <exclude name="NcssCount"/>
@@ -35,6 +36,11 @@
     <exclude name="BeanMembersShouldSerialize"/>
     <exclude name="DataflowAnomalyAnalysis"/>
     <exclude name="DontImportSun"/>
+  </rule>
+  <rule ref="category/java/design.xml/ImmutableField">
+    <properties>
+      <property name="ignoredAnnotations" value="org.apache.maven.plugins.annotations.Parameter"/>
+    </properties>
   </rule>
   <rule ref="category/java/errorprone.xml/AssignmentInOperand">
     <properties>
