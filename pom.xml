@@ -670,7 +670,6 @@
         <pluginManagement>
           <plugins>
             <plugin>
-              <!-- https://github.com/mojohaus/versions-maven-plugin/issues/390 -->
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>versions-maven-plugin</artifactId>
               <executions>
