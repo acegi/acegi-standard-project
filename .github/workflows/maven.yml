@@ -14,18 +14,13 @@ jobs:
     steps:
     - name: Check out Git repository
       uses: actions/checkout@v2
-      
-    - name: Set up Java and Maven
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
 
-    - name: Cache Maven packages
-      uses: actions/cache@v1
+    - name: Set up Java and Maven
+      uses: actions/setup-java@v3
       with:
-        path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-m2
+        distribution: zulu
+        java-version: 18
+        cache: maven
 
     - name: Build with Maven
       run: mvn -B verify
