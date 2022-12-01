@@ -22,7 +22,7 @@
     <maven.enforcer.java>1.8</maven.enforcer.java>
     <maven.enforcer.mvn>3.5.4</maven.enforcer.mvn>
     <pmd.ruleset>${project.build.directory}/acegi-standard-resources/au/com/acegi/standard/rule-set-pmd.xml</pmd.ruleset>
-    <pmd.version>6.44.0</pmd.version>
+    <pmd.version>6.52.0</pmd.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <trimStackTrace>false</trimStackTrace>
   </properties>
@@ -331,7 +331,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>3.16.0</version>
+          <version>3.19.0</version>
           <configuration>
             <outputDirectory>${project.build.directory}/pmd/html</outputDirectory>
             <targetDirectory>${project.build.directory}/pmd/xml</targetDirectory>
