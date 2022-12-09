@@ -308,10 +308,11 @@
             </execution>
           </executions>
         </plugin>
+        <!-- 3.6.4 required for Java 7 classfile compatibility -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>3.7.0</version>
+          <version>3.6.4</version>
           <executions>
             <execution>
               <id>default-descriptor</id>
