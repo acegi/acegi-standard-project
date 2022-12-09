@@ -57,7 +57,7 @@ jobs:
         gpg-passphrase: MAVEN_GPG_PASSPHRASE
 
     - name: Publish Maven package
-      run: mvn -Possrh-deploy deploy
+      run: mvn -Possrh-deploy -B deploy
       env:
         MAVEN_GPG_PASSPHRASE: ${{ secrets.gpg_passphrase }}
         MAVEN_USERNAME: ${{ secrets.nexus_username }}
