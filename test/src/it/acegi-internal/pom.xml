@@ -43,6 +43,11 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
+        <configuration>
+          <ignoredDependencies>
+            <ignoredDependency>au.com.acegi:acegi-standard-resources</ignoredDependency>
+          </ignoredDependencies>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

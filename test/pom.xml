@@ -9,6 +9,13 @@
   <artifactId>acegi-standard-test</artifactId>
   <packaging>pom</packaging>
   <name>Acegi Standard Project: Test</name>
+  <dependencies>
+    <dependency>
+      <groupId>au.com.acegi</groupId>
+      <artifactId>acegi-standard-resources</artifactId>
+      <version>${acegi.standard.resources.version}</version>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <!-- we shouldn't deploy acegi-standard-test, but this Nexus bug leave us no alternative: https://issues.sonatype.org/browse/NEXUS-9138
