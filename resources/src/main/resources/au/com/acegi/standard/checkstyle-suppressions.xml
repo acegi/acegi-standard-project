@@ -3,4 +3,6 @@
 <suppressions>
   <suppress files=".*/generated-sources/.*" checks="[a-zA-Z0-9]*"/>
   <suppress files=".*/generated-test-sources/.*" checks="[a-zA-Z0-9]*"/>
+  <suppress files=".*\/dto\/.*" checks="[a-zA-Z0-9]*"/>
+  <suppress files=".*Dto\.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>
